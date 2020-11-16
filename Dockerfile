@@ -4,7 +4,7 @@ RUN yum -y install centos-release-scl yum-utils &&\
     yum -y install devtoolset-7-gcc-c++ devtoolset-7-gcc cmake &&\
     yum clean all
 
-ENV	BASH_ENV=/etc/profile.d/enable.sh
+ENV BASH_ENV=/etc/profile.d/enable.sh
 
 ADD ./etc /etc
 ADD ./root /root
