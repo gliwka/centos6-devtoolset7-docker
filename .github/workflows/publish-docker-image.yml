@@ -7,12 +7,11 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Push to GitHub Packages
+      - name: Push to GitHub Container Registry
         uses: docker/build-push-action@v1
         with:
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHCR }}
           registry: ghcr.io
           repository: gliwka/centos6-devtoolset7
           tag_with_ref: true
-
