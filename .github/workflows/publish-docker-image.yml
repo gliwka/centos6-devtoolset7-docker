@@ -12,7 +12,7 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: gliwka/centos6-devtoolset7-docker/centos6-devtoolset7
+          registry: ghcr.io
+          repository: gliwka/centos6-devtoolset7
           tag_with_ref: true
 
