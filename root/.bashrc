@@ -1,1 +1,1 @@
-source /opt/rh/devtoolset-7/enable
+source /etc/profile.d/profile.sh
