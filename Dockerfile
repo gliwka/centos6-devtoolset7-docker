@@ -1,7 +1,7 @@
 FROM centos:centos6
 RUN yum -y install centos-release-scl yum-utils &&\
     yum-config-manager --enable rhel-server-rhscl-7-rpms &&\
-    yum -y install devtoolset-7-gcc-c++ devtoolset-7-gcc cmake java-1.7.0-openjdk-devel &&\
+    yum -y install devtoolset-7-gcc-c++ devtoolset-7-gcc cmake java-1.7.0-openjdk-devel patch &&\
     yum clean all
 
 RUN cd /usr/local/src/ &&\
