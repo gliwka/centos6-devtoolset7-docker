@@ -3,7 +3,7 @@ RUN sed -i -e 's/^mirrorlist/#mirrorlist/g' -e 's/^#baseurl=http:\/\/mirror.cent
     yum -y install centos-release-scl yum-utils &&\
     sed -i -e 's/^mirrorlist/#mirrorlist/g' -e 's/^#\s\{0,1\}baseurl=http:\/\/mirror.centos.org\/centos\/6\//baseurl=http:\/\/vault.centos.org\/6.10\//g' /etc/yum.repos.d/CentOS-SCLo-*.repo &&\
     yum-config-manager --enable rhel-server-rhscl-7-rpms &&\
-    yum -y install devtoolset-7-gcc-c++ devtoolset-7-gcc cmake java-1.7.0-openjdk-devel patch &&\
+    yum -y install devtoolset-7-gcc-c++ devtoolset-7-gcc cmake java-1.7.0-openjdk-devel patch git &&\
     yum clean all
 
 RUN cd /usr/local/src/ &&\
